@@ -1,0 +1,15 @@
+function checkAnswer(){
+   const correctAnswer = '4';
+    const userAnswer = document.querySelector('input[name="quiz"]:checked');
+
+    if(userAnswer === correctAnswer){
+        document.getElementById("feedback").textContent = "correct! welldone"
+    }
+    if(userAnswer !== correctAnswer){
+        document.getElementById("feedback").textContent= "That's incorrect. Try again!"
+    }
+}
+
+document.getElementById("submit-answer").addEventListener(
+    'click', checkAnswer
+)
